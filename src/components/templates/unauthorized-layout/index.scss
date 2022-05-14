@@ -1,0 +1,32 @@
+.unauthorized-layout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
+  background-repeat: no-repeat;
+  background-position: center 110px;
+  background-size: 100%;
+
+  &_accreditation {
+    background-position: center 50px;
+  }
+
+  &_logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img {
+      height: 80px;
+      margin-left: 70px;
+    }
+
+    h4.ant-typography {
+      margin-bottom: 0;
+      margin-left: 50px;
+    }
+  }
+}

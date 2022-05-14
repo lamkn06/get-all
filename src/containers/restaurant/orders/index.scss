@@ -1,0 +1,198 @@
+.restaurant-order {
+  &__row {
+    cursor: pointer;
+
+    &--alert {
+      font-weight: 500;
+      color: $antd-error;
+
+      td:first-of-type .ant-typography {
+        color: $antd-error;
+      }
+    }
+  }
+
+  &__col-price {
+    color: $main !important;
+  }
+
+  &__status-col {
+    display: flex;
+    @include tablet-down {
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__status-wrapper {
+    margin-bottom: 20px;
+
+    .ant-checkbox-wrapper {
+      width: 120px;
+      margin-left: 0;
+    }
+  }
+
+  &__reference-number {
+    white-space: normal;
+  }
+
+  &__hide-cutlery {
+    display: none;
+  }
+
+  .ant-ribbon-placement-end {
+    transform: translateY(-14px);
+
+    .ant-ribbon-text {
+      line-height: 18px;
+      vertical-align: top;
+    }
+  }
+
+  &__check-icon {
+    font-size: 30px;
+    color: #84b15c;
+  }
+
+  .ant-collapse-header {
+    padding: 8px 16px !important;
+  }
+
+  .collapse-header {
+    display: flex;
+    align-items: center;
+
+    label {
+      margin-left: 12px;
+    }
+  }
+
+  .left {
+    .ant-card-bordered {
+      color: $white;
+
+      text-align: center;
+      background: $orange;
+      border-radius: 5px;
+
+      .ant-typography {
+        color: $white;
+      }
+    }
+  }
+
+  .status-box {
+    margin-top: 10px;
+    text-transform: capitalize;
+
+    h5 {
+      &:first-child {
+        color: $orange;
+      }
+    }
+  }
+
+  .box {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 14px;
+    background-color: $white;
+    border: 1px solid $border;
+  }
+
+  .fare-row {
+    h5.ant-typography {
+      margin-bottom: 0;
+    }
+
+    .ant-col {
+      display: flex;
+      flex-direction: column;
+
+      &:first-of-type {
+        border-right: 1px solid $grey;
+      }
+
+      .ant-divider {
+        margin: 12px 0;
+      }
+    }
+
+    .fare-detail {
+      flex-grow: 1;
+
+      .total {
+        font-weight: 500;
+        color: $orange;
+
+        strong {
+          color: $orange;
+        }
+      }
+    }
+
+    .fare-price {
+      width: 54px;
+    }
+
+    .collected-row {
+      font-weight: 500;
+      line-height: normal;
+      color: $main;
+
+      h5 {
+        color: $main;
+      }
+
+      .price {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .order-items-info {
+    p {
+      margin-bottom: 0;
+    }
+
+    & + .order-items-info {
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid $grey;
+    }
+  }
+
+  .text-orange {
+    color: $orange;
+  }
+
+  &_right-wrapper {
+    display: flex;
+
+    @include tablet-down {
+      margin-top: 1rem;
+    }
+  }
+
+  &_right-steps {
+    flex: 0 0 120px;
+    margin-right: -14px;
+    margin-left: 10px;
+
+    .ant-steps-item-active {
+      .ant-steps-item-title {
+        font-weight: 500;
+        color: $blue !important;
+      }
+    }
+
+    .ant-steps-item-title {
+      text-transform: capitalize;
+    }
+
+    .ant-steps-item-icon {
+      margin-right: 6px !important;
+    }
+  }
+}

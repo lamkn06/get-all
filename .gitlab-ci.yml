@@ -1,0 +1,62 @@
+stages:
+  # - test
+  - build
+
+variables:
+  NAMESPACE: 'development'
+
+.base-rules:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - if: $CI_COMMIT_REF_NAME == 'master'
+      variables:
+        NAMESPACE: 'production'
+        DEPLOY_URL: 'tms.getall.com.ph'
+        ENV_STORE: $PROD_ENVs
+    - if: $CI_COMMIT_REF_NAME == 'staging'
+      variables:
+        NAMESPACE: 'staging'
+        DEPLOY_URL: 'staging.tms.getall.com.ph'
+        ENV_STORE: $STG_ENVs
+    - if: $CI_COMMIT_REF_NAME == 'develop'
+      variables:
+        NAMESPACE: 'development'
+        DEPLOY_URL: 'development.tms.getall.com.ph'
+        ENV_STORE: $DEV_ENVs
+    - if: $CI_COMMIT_REF_NAME == 'deployer'
+      variables:
+        NAMESPACE: 'development'
+        DEPLOY_URL: 'development.tms.getall.com.ph'
+        ENV_STORE: $DEV_ENVs
+
+before_script:
+  - set -a
+  - export CI=false
+  - export ENVs="$ENV_STORE"
+  - echo $ENVs
+# test:
+#   tags:
+#     - no-docker
+#   stage: test
+#   image: node:16.3.0
+#   script:
+#     - yarn install
+#     - yarn test
+#   only:
+#     - merge_request
+#     - develop
+build:
+  tags:
+    - no-docker
+  stage: build
+  extends: .base-rules
+  image: node:16.3.0
+  script:
+    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    - unzip awscliv2.zip
+    - echo "$ENV_STORE" > .env
+    - yarn install
+    - yarn build
+    - ./aws/install
+    - aws s3 sync  ./build/ s3://$DEPLOY_URL/ --delete

@@ -1,0 +1,19 @@
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+
+  &__main-img {
+    width: 40vw;
+    opacity: 0.1;
+    animation: fade-out ease-in-out 0.4s forwards;
+  }
+
+  @keyframes fade-out {
+    100% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}

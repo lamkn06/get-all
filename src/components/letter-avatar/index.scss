@@ -1,0 +1,21 @@
+.letter-avatar {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+
+  .ant-avatar {
+    flex-shrink: 0;
+    background-color: $avatar-bg;
+  }
+
+  .ant-avatar-string {
+    text-transform: uppercase;
+  }
+
+  &__name {
+    min-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

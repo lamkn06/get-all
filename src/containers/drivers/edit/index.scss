@@ -1,0 +1,46 @@
+.driver-edit {
+  &__hidden {
+    display: none;
+  }
+
+  &__upload {
+    margin-bottom: 8px;
+    text-align: center;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  &__card {
+    .ant-card-body {
+      padding: 6px 20px;
+    }
+  }
+
+  &__ant-input-number-group-wrapper {
+    width: 100%;
+  }
+
+  &__doc-item {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $blue;
+    }
+
+    > span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .anticon {
+      flex-shrink: 0;
+    }
+  }
+}

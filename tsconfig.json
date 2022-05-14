@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "forceConsistentCasingInFileNames": false,
+    "strictNullChecks": false,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": false,
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"],
+      "images/*": ["src/assets/images/*"]
+      // "styles/*": ["src/assets/styles/*"]
+    }
+  },
+  "exclude": ["node_modules", "build", "**/*.stories.tsx", "**/*.test.ts"]
+}

@@ -1,0 +1,32 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "targets": { "node": "current" } }],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "babel-plugin-react-require",
+    "@babel/plugin-transform-modules-commonjs",
+    [
+      "@babel/plugin-transform-typescript",
+      {
+        "allowNamespaces": true
+      }
+    ],
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-syntax-dynamic-import"
+  ],
+  "env": {
+    "production": {
+      "only": ["src"],
+      "plugins": ["@babel/plugin-transform-react-inline-elements"]
+    },
+    "test": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs",
+        "dynamic-import-node"
+      ]
+    }
+  }
+}

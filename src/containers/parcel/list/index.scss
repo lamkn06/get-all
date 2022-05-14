@@ -1,0 +1,35 @@
+.parcel-list {
+  &__row {
+    cursor: pointer;
+
+    &--alert {
+      font-weight: 500;
+      color: $antd-error;
+
+      td:first-of-type .ant-typography {
+        color: $antd-error;
+      }
+    }
+  }
+
+  &__col-price {
+    color: $main !important;
+  }
+
+  &__status-col {
+    display: flex;
+    @include tablet-down {
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__status-wrapper {
+    margin-bottom: 20px;
+
+    .ant-checkbox-wrapper {
+      width: 120px;
+      margin-left: 0;
+    }
+  }
+}

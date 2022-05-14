@@ -1,0 +1,45 @@
+.voucher-edit {
+  .form-2-column {
+    display: flex;
+    align-items: flex-end;
+
+    div:first-of-type {
+      flex-grow: 1;
+    }
+
+    .form-number-input {
+      flex-basis: 63px;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    .ant-form-item-explain {
+      display: none;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 1rem;
+  }
+
+  .asynchronous-search {
+    width: unset;
+    margin-bottom: 0;
+  }
+
+  &__table-wrapper {
+    margin-bottom: -100px;
+  }
+
+  &__table {
+    margin-top: 1rem;
+
+    .ant-table-cell {
+      padding: 8px;
+    }
+  }
+
+  &__delete-customer {
+    transform: translateY(-44px);
+  }
+}

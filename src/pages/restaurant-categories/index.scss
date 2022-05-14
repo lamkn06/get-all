@@ -1,0 +1,18 @@
+.product-edit {
+  &__upload {
+    margin-bottom: 8px;
+    text-align: center;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .ant-upload {
+    overflow: hidden;
+  }
+
+  .ant-upload-select-picture-card {
+    padding: 5px;
+  }
+}

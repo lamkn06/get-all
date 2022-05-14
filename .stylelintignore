@@ -1,0 +1,4 @@
+*.*
+!*.scss
+reset.scss
+app.scss

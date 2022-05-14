@@ -1,0 +1,65 @@
+.accreditation {
+  $root: &;
+
+  width: 90vw;
+  max-width: 1080px;
+  height: 85vh;
+  padding: 0 12px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  &__card {
+    margin-top: 1rem;
+    box-shadow: $box-shadow-1;
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
+
+  &__upload-btn {
+    width: 200px;
+    height: 200px;
+    padding-right: 12px;
+    padding-left: 12px;
+    color: $dark-grey;
+    border-color: $dark-grey;
+
+    > span:nth-child(2) {
+      display: block;
+      white-space: pre-wrap;
+    }
+
+    .ant-form-item & {
+      .anticon-upload {
+        font-size: 1.1rem;
+        color: $black;
+      }
+    }
+
+    .ant-form-item-has-success &,
+    .form-success:not(.ant-form-item-has-error) & {
+      font-weight: 500;
+      color: $green;
+      border-color: $green;
+
+      .anticon-upload {
+        color: $green;
+      }
+    }
+
+    .ant-form-item-has-error & {
+      border-color: $antd-error;
+    }
+  }
+
+  // Custom upload  class
+  .ant-upload-span {
+    justify-content: center;
+  }
+
+  .ant-upload-list-item-name {
+    flex: unset;
+    width: auto;
+  }
+}

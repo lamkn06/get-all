@@ -1,0 +1,30 @@
+@mixin sp {
+  @media (max-width: $breakpoint-sp + 1) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: $breakpoint-tablet +1) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: $breakpoint-pc) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-sp +1) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin line-clamp($lineCount: 1) {
+  box-orient: vertical;
+  display: box;
+  -webkit-line-clamp: $lineCount;
+  overflow: hidden;
+}

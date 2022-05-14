@@ -1,0 +1,41 @@
+.rate-detail {
+  &__apply-button {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__customer-row {
+    td {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+  }
+
+  &__heading_row {
+    column-gap: 16px;
+
+    > div {
+      display: flex;
+      flex-basis: 360px;
+
+      .ant-btn {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__tag-wrapper {
+    .ant-card-body {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 8px;
+      align-items: baseline;
+    }
+  }
+
+  &__cus-tag {
+    .anticon-close {
+      transform: scale(1.1);
+    }
+  }
+}

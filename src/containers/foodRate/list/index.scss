@@ -1,0 +1,26 @@
+.rate-list {
+  .add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+
+    cursor: pointer;
+    border: 1px dashed $green-grey;
+  }
+
+  .card {
+    width: 280px;
+
+    cursor: 'pointer';
+
+    .ant-card-body {
+      height: 170px;
+    }
+  }
+
+  .title {
+    max-width: 220px;
+  }
+}

@@ -1,0 +1,9 @@
+.driver-filter {
+  display: flex;
+  width: 240px;
+  margin-bottom: 10px;
+
+  &__row--active {
+    background-color: rgba($color: $blue, $alpha: 0.2);
+  }
+}

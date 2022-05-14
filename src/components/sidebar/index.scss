@@ -1,0 +1,39 @@
+.sider-bar {
+  background-color: $white;
+
+  &__trigger {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 24px;
+    line-height: 48px;
+    border-top: 1px solid $border;
+    transition: color 0.3s;
+
+    .anticon {
+      cursor: pointer;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  &__menu {
+    height: calc(100vh - 96px);
+    overflow: hidden;
+    overflow-y: auto;
+
+    &:not(.ant-menu-inline-collapsed) {
+      .ant-menu-item:not(.ant-menu-item-only-child),
+      .ant-menu-submenu-title {
+        padding-left: 10px !important;
+      }
+
+      .ant-menu-item-only-child {
+        padding-left: 34px !important;
+      }
+    }
+  }
+}

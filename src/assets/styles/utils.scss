@@ -1,0 +1,96 @@
+@for $i from 0 through 4 {
+  // Padding class
+  .pt-#{$i} {
+    padding-top: #{$i * 0.5}em;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i * 0.5}em;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i * 0.5}em;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i * 0.5}em;
+  }
+  .px-#{$i} {
+    padding-right: #{$i * 0.5}em;
+    padding-left: #{$i * 0.5}em;
+  }
+  .py-#{$i} {
+    padding-top: #{$i * 0.5}em;
+    padding-bottom: #{$i * 0.5}em;
+  }
+  .p-#{$i} {
+    padding: #{$i * 0.5}em;
+  }
+
+  // Margin class
+  .mt-#{$i} {
+    margin-top: #{$i * 0.5}em;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i * 0.5}em;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i * 0.5}em;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i * 0.5}em;
+  }
+  .mx-#{$i} {
+    margin-right: #{$i * 0.5}em;
+    margin-left: #{$i * 0.5}em;
+  }
+  .my-#{$i} {
+    margin-top: #{$i * 0.5}em;
+    margin-bottom: #{$i * 0.5}em;
+  }
+  .m-#{$i} {
+    margin: #{$i * 0.5}em;
+  }
+}
+
+// Center
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.float-right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}

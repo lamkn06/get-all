@@ -1,0 +1,11 @@
+.green-button {
+  color: $white;
+  background-color: $green;
+  border-color: $green;
+
+  &:hover,
+  &:focus {
+    color: $green;
+    border-color: $green;
+  }
+}
